@@ -1,0 +1,35 @@
+
+#[!TIP]
+**error message: /usr/bin/python: bad interpreter: No such file or directory**
+
+If Python is not installed on your laptop, please install it first. 
+if you already have Python installed, please check the version and the name in /usr/bin, eg:
+
+````
+```
+jingzhe@SG-NL-LINUX-006:/usr/bin$  ls -alh /usr/bin/pyt*
+lrwxrwxrwx 1 root root   10 aug 18  2022 /usr/bin/python3 -> python3.10
+-rwxr-xr-x 1 root root 5,7M mrt 22 17:50 /usr/bin/python3.10
+lrwxrwxrwx 1 root root   34 mrt 22 17:50 /usr/bin/python3.10-config -> x86_64-linux-gnu-python3.10-config
+lrwxrwxrwx 1 root root   17 aug 18  2022 /usr/bin/python3-config -> python3.10-config
+-rwxr-xr-x 1 root root  960 jan 25  2023 /usr/bin/python3-futurize
+-rwxr-xr-x 1 root root  964 jan 25  2023 /usr/bin/python3-pasteurize
+-rwxr-xr-x 1 root root 2,5K feb 27  2021 /usr/bin/python-argcomplete-check-easy-install-script3
+-rwxr-xr-x 1 root root  314 feb 27  2021 /usr/bin/python-argcomplete-tcsh3
+
+```
+````
+
+In my case, python3 is displayed instead of phython.
+
+Then let us edit the file update_list. First, add the write permit to this file, it is read only by default.
+
+```
+sudo chmod a+w update_list
+```
+
+Second, change the first line(just in my case)
+
+'#!/usr/bin/python'   to 
+'#!/usr/bin/python3'
+save, and run ./update_list, hope the problem is solved on your laptop.
