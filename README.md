@@ -1,3 +1,5 @@
+https://blog.csdn.net/PHILICS7/article/details/134512178
+
 # glibc-all-in-one
 
 1. clone the repository to local, the repository is : https://github.com/matrix1001/glibc-all-in-one
@@ -32,6 +34,22 @@
       #!/usr/bin/python     to   #!/usr/bin/python3
       save, and run ./update_list, hope the problem is solved on your laotop.
    2. error message:  ModuleNotFoundError: No module named 'requests'
+  
+      sudo apt-get --reinstall install python3-requests
+
+   3. download glibc package that you need.
+      Check the "download" file, to find ou the download website(the url:http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/
+      and you can check all the glib package there, the name can be different from the update_list, please check and change the download file, to make sure the download can be successfully done.
+   4. sudo ./build  "glibc version" "process type"
+         glibc version": the version you just want to build/you downloaded
+         process rype: your laptop process type
+         you can run sudo ./build,then the supportted info will be printed，like：
+         
+         supported version: 2.19, 2.23-2.29
+         supported arch: i686, amd64
+          
+     
+         
 
   
 
